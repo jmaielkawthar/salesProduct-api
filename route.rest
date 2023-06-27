@@ -1,0 +1,116 @@
+############################### => users 
+GET HTTP://127.0.0.1:3008/users
+
+### => content-Type: application/json
+
+POST HTTP://127.0.0.1:3008/users
+
+{
+"cin_user": "08878233", "name": "kawthar", "age": "27" ,"telephone": "22218743" ,"email": "jmaielkawthar@gmail.com" ,"adresse": "tunisia sfax" , "password": "123456" ,"role": "admin" ,
+}
+
+### 
+
+DELETE HTTP://127.0.0.1:3008/users/644875f7b78bd5a406e685ab
+
+### => content-Type: application/json
+
+PATCH HTTP://127.0.0.1:3008/users/6440395e14c9758d4181c737
+{
+"name": "change name", "age": "25", "favoriteFoods":["salade", "meat"]
+}
+############################### => product 
+GET HTTP://127.0.0.1:3008/product
+POST HTTP://127.0.0.1:3008/product
+
+{
+    "name_product": "Soin Anti-Pollution Réparateur Jour",
+    "price": 86,000,
+    "date": "juin 2020",
+    "image": "https://static.wixstatic.com/media/19572a_e4a23a8aa5664e14a3977e0855bb54c4~mv2.jpg/v1/fill/w_420,h_420,al_c,q_85,usm_0.66_1.00_0.01/19572a_e4a23a8aa5664e14a3977e0855bb54c4~mv2.webp",
+    "description": "Le Soin Anti-Pollution Réparateur Jour désasphyxie immédiatement la peau, elle est protégée face aux méfaits de la pollution responsables du vieillissement prématuré de la peau. Dès 1 mois, rides et ridules sont réduites ; la peau est réparée, fortifiée et paraît éclatante de santé Dans notre élixir botanique, la Micro-Algue et la Capucine de Bretagne stimulent l'oxygénation et la détoxification des cellules de la peau (1). Actifs issus de filières locales respectueuses de la biodiversité.",
+    "ref": 74812,
+    "name_category": "soin visage"
+}
+{
+    "name_product": "Eau De Parfum Comme Une Evidence-50 Ml",
+    "price": 110,000,
+    "date": "juin 2020",
+    "image": "https://www.yvesrocher.tn/3540-large_default/evidence-intense-edp-50ml.jpg",
+    "description": "Le Sleeping Care Soin Récuperateur Nuit laisse la peau désasphyxiée, rebondie et défatiguée dès le premier réveil. Dès 1 mois, les rides et ridules sont réduites, la peau est fortifiée et paraît éclatante de santé.",
+    "ref": 74812,
+    "name_category": "parfums"
+}
+
+############################### => category
+GET HTTP://127.0.0.1:3008/category
+POST HTTP://127.0.0.1:3008/category
+
+{
+"name_category": "soin visage" ,
+}
+
+{
+    "name_category": "cheveux"
+}
+{
+    "name_category": "coprs et douche"
+}
+{
+    "name_category": "parfums"
+}
+{
+    "name_category": "maquillage"
+}
+
+POST HTTP://127.0.0.1:3008/product
+  {
+        "ref": 033,
+        "image": "https://static.wixstatic.com/media/587acd_fb8874cc35dd4aa99717ff62305bced1~mv2.png/v1/fill/w_420,h_420,al_c,q_90,usm_0.66_1.00_0.01/587acd_fb8874cc35dd4aa99717ff62305bced1~mv2.webp",
+        "name_product": "Eau de Toilette Bois de Sauge - 100 ml",
+        "price": "100,000 TND Prix",
+        "date": "october 2020",
+           "name_category": "parfums",
+        "description": "L'intensité d'une fraîcheur aromatique"
+    }
+
+POST HTTP://127.0.0.1:3008/transportation
+{
+  "name_transportation": "Joomia",
+  "telephone": 25487987,
+  "prix": 8,
+  "date_delivery": "2023-12-25"
+}
+
+POST HTTP://127.0.0.1:3008/commande
+
+{
+  "user": "648a19d7a667cebbafbd1dc6",
+  "products": [
+    {
+      "product": "648e0b1c40385650fc78d629",
+      "quantity": 2
+    },
+    {
+      "product": "648f708240864fc82685ea8b",
+      "quantity": 3
+    }
+  ],
+  "transportation": "64989d22252c19caec259a3d"
+}
+
+
+{
+  "user": "648a1bdba667cebbafbd1dc8",
+  "products": [
+    {
+      "product": "648a36fa3b19769edef0f3a6",
+      "quantity": 1
+    },
+    {
+      "product": "648f708240864fc82685ea8b",
+      "quantity": 2
+    }
+  ],
+  "transportation": "64989d22252c19caec259a3d"
+}
