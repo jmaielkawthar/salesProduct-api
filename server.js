@@ -31,7 +31,7 @@ mongoose
 // Enable CORS for all routes
 // app.use(cors());
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: 'https://salesproduct.onrender.com',
   optionsSuccessStatus: 200,
 };
 
