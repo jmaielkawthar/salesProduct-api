@@ -1,5 +1,6 @@
 const env = require('dotenv').config({ path: './config/.env' });
 const port = 3008;
+const cors = require('cors');
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -27,6 +28,15 @@ mongoose
   .catch((err) => {
     console.error('Database connection error', err);
   });
+// Enable CORS for all routes
+// app.use(cors());
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+
 
 // Mount the userRouter on the /users route
 app.use('/users', userRouter);
@@ -34,6 +44,7 @@ app.use('/category', categoryRouter);
 app.use('/product', productRouter);
 app.use('/commande', commandeRouter);
 app.use('/transportation', transportationRouter);
+
 
 // Start the server
 app.listen(port, function () {

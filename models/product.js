@@ -19,6 +19,7 @@ let productSchema = new mongoose.Schema({
   },
   date: {
     type: String,
+    default:" december 2023",
   },
   description: {
     type: String,

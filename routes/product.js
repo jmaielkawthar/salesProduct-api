@@ -78,7 +78,6 @@ router.put('/:id', async (req, res) => {
 
     product.name_product= req.body.name_product,
     product.price=req.body.price,
-    product.number= req.body.number,
     product.image= req.body.image,
     product.description= req.body.description,
     product.date= req.body.date;
