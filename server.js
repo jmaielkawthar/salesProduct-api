@@ -39,17 +39,17 @@ app.use(cors(corsOptions));
 
 
 // Mount the userRouter on the /users route
-app.use('/users', userRouter);
-app.use('/category', categoryRouter);
-app.use('/product', productRouter);
-app.use('/commande', commandeRouter);
-app.use('/transportation', transportationRouter);
+app.use('https://salesproduct-api.onrender.com/users', userRouter);
+app.use('https://salesproduct-api.onrender.com/category', categoryRouter);
+app.use('https://salesproduct-api.onrender.com/product', productRouter);
+app.use('https://salesproduct-api.onrender.com/commande', commandeRouter);
+app.use('https://salesproduct-api.onrender.com/transportation', transportationRouter);
 
 
 // Start the server
 app.listen(port, function () {
   console.log(
-    'The server is running, please open your browser at http://localhost:%s',
+    'The server is running, please open your browser at https://salesproduct.onrender.com',
     port
   );
 });
